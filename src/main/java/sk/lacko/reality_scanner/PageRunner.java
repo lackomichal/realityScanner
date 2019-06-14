@@ -15,7 +15,7 @@ public class PageRunner {
         List<IPage> pagesToProcessLater = mainPage.process();
         pagesQueue.addAll(pagesToProcessLater);
 
-        for (IPage subPage = pagesQueue.poll();subPage!=null;subPage = pagesQueue.poll()){
+        for (IPage subPage = pagesQueue.poll(); subPage!=null; subPage = pagesQueue.poll()){
             pagesQueue.addAll(subPage.process());
         }
     }
