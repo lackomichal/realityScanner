@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public abstract class APage implements IPage {
     protected HtmlPage htmlPage;
     @Autowired
-    private WebClient webClient;
+    protected WebClient webClient;
 
     public APage(HtmlPage htmlPage) {
         this.htmlPage = htmlPage;
